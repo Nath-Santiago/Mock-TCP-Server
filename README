@@ -1,0 +1,4 @@
+Run: ```node <filename>.js``` to start mock server
+
+For FINACLE Server: ```node Finacle.js```
+For ITG Server: ```node ITG.js```
