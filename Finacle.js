@@ -50,7 +50,7 @@ const sendResponse = (value)  => {
     });
 
      //path of the file
-     const filePath = './text2.txt';
+     const filePath = './fromITG.txt';
 
      // Read file and send contents to the server
      fs.readFile(filePath, (err, data) => {
