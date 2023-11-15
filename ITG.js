@@ -37,25 +37,23 @@ const fs = require("fs");
 
 
 // SERVER
-const mockITGServer= net.createServer(socket => {
+const mockITGServer = net.createServer(socket => {
     console.log("A client from IBM just connected. He came from Finacle");
 
     socket.on("data", clientData => {
         // socket.write(`Client sent ${clientData}`)
-        console.log('sample message',clientData.toString());
-        console.log(clientData.toString());
-        console.log('message received...');
-
-
-    })
-    socket.on("end", () => {
+        // console.log('sample message',clientData.toString());
         // console.log(clientData.toString());
-        console.log('Client left');
-    })
+        // console.log('message received...');
 
-    socket.on('connect', connect => {
-        console.log(connect);
+        const message = `Hi `;
+        socket.write(message);
+        console.log('RESPONSE SENT', message)
     })
+    socket.on('end', end => {
+        console.log("Goodbye | (Connection Closed)");
+        socket.end();
+    });
 
     socket.on('error', error => {
         console.log('lol: ', error);
