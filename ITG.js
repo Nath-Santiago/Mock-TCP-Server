@@ -46,7 +46,7 @@ const mockITGServer = net.createServer(socket => {
         // console.log(clientData.toString());
         // console.log('message received...');
 
-        const message = `Hi `;
+        const message = `Hi`;
         socket.write(message);
         console.log('RESPONSE SENT', message)
     })

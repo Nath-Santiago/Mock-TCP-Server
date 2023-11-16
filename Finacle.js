@@ -30,8 +30,9 @@ const mockFinacleServer = net.createServer(socket => {
         // sendResponse(clientData.toString(), socket.remoteAddress, socket.remotePort);
         console.log(socket.remoteAddress, socket.remotePort);
        
-        const message = `Hello `;
+        const message = `Hello`;
         socket.write(message);
+        console.log('RESPONSE SENT', message)
         // console.log('RESPONSE SENT')
         // sendResponse(clientData.toString(), socket.remoteAddress, socket.remotePort);
 
